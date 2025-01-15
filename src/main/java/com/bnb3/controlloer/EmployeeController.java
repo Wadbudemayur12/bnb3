@@ -23,6 +23,8 @@ public ResponseEntity<?> addEmployee(@Valid @RequestBody EmployeeDto dto, Bindin
         if(result.hasErrors()) {
        return new ResponseEntity<>(result.getFieldError().getDefaultMessage(),HttpStatus.INTERNAL_SERVER_ERROR);
         }
+        System.out.println("100");
+        System.out.println("200");
         EmployeeDto empDto = employeeService.addEmployee(dto);
         return new ResponseEntity<>(empDto, HttpStatus.CREATED);
 }
