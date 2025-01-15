@@ -53,4 +53,7 @@ public ResponseEntity<?> addEmployee(@Valid @RequestBody EmployeeDto dto, Bindin
        EmployeeDto dto = employeeService.getEmployeeById(empId) ;
        return new ResponseEntity<>(dto,HttpStatus.OK) ;
     }
+    public void add(){
+        System.out.println("email service update");
+    }
 }
